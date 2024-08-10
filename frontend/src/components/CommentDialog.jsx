@@ -16,7 +16,11 @@ const CommentDialog = ({ open, setOpen }) => {
   const [comment, setComment] = useState([]);
   const dispatch = useDispatch();
 
-  
+  useEffect(() => {
+    if (selectedPost) {
+      setComment(selectedPost.comments);
+    }
+  }, [selectedPost]);
 
   
 
