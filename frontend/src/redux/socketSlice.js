@@ -12,3 +12,5 @@ const socketSlice = createSlice({
         }
     }
 });
+export const {setSocket} = socketSlice.actions;
+export default socketSlice.reducer;
