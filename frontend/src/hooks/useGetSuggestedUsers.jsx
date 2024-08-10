@@ -20,3 +20,4 @@ const useGetSuggestedUsers = () => {
         fetchSuggestedUsers();
     }, []);
 };
+export default useGetSuggestedUsers;
