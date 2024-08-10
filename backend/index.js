@@ -38,3 +38,7 @@ app.get("*", (req,res)=>{
 })
 
 
+server.listen(PORT, () => {
+    connectDB();
+    console.log(`Server listen at port ${PORT}`);
+});
