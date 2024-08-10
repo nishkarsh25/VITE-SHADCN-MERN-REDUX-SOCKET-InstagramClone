@@ -10,4 +10,6 @@ import { persistStore } from 'redux-persist'
 
 let persistor = persistStore(store)
 
-
+ReactDOM.createRoot(document.getElementById('root')).render(
+  
+)
