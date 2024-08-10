@@ -94,3 +94,4 @@ const CreatePost = ({ open, setOpen }) => {
   )
 }
 
+export default CreatePost
