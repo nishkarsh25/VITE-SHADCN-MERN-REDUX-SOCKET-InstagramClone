@@ -21,3 +21,4 @@ const useGetAllMessage = () => {
         fetchAllMessage();
     }, [selectedUser]);
 };
+export default useGetAllMessage;
