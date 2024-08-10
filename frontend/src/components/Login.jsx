@@ -49,7 +49,11 @@ const Login = () => {
         }
     }
 
-    
+    useEffect(()=>{
+        if(user){
+            navigate("/");
+        }
+    },[])
     return 
 }
 
