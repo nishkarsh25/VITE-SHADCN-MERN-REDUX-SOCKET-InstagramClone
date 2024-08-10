@@ -116,3 +116,4 @@ const CommentDialog = ({ open, setOpen }) => {
   )
 }
 
+export default CommentDialog
