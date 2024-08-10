@@ -10,5 +10,19 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import { setAuthUser } from '@/redux/authSlice';
 
+const EditProfile = () => {
+    const imageRef = useRef();
+    const { user } = useSelector(store => store.auth);
+    const [loading, setLoading] = useState(false);
+    const [input, setInput] = useState({
+        profilePhoto: user?.profilePicture,
+        bio: user?.bio,
+        gender: user?.gender
+    });
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
+   
+    return 
+}
 
