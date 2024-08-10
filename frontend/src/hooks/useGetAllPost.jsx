@@ -21,3 +21,4 @@ const useGetAllPost = () => {
         fetchAllPost();
     }, []);
 };
+export default useGetAllPost;
