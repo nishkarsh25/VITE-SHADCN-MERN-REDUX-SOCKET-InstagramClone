@@ -12,5 +12,19 @@ import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 import { Button } from './ui/button'
 import { setLikeNotification } from '@/redux/rtnSlice'
 
+const LeftSidebar = () => {
+    const navigate = useNavigate();
+    const { user } = useSelector(store => store.auth);
+    const { likeNotification } = useSelector(store => store.realTimeNotification);
+    const dispatch = useDispatch();
+    const [open, setOpen] = useState(false);
 
+
+    
+
+    
+
+    
+    return 
+}
 
