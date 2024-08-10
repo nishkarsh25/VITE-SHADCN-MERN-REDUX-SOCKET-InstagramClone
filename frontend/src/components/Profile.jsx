@@ -18,7 +18,11 @@ const Profile = () => {
   const isLoggedInUserProfile = user?._id === userProfile?._id;
   const isFollowing = false;
 
-  
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  }
+
+  const displayedPost = activeTab === 'posts' ? userProfile?.posts : userProfile?.bookmarks;
 
   return 
 }
