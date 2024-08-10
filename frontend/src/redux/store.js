@@ -23,7 +23,13 @@ const persistConfig = {
     storage,
 }
 
-
+const rootReducer = combineReducers({
+    auth:authSlice,
+    post:postSlice,
+    socketio:socketSlice,
+    chat:chatSlice,
+    realTimeNotification:rtnSlice
+})
 
 
 
