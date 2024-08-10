@@ -87,7 +87,39 @@ export const getUserPost = async (req, res) => {
         console.log(error);
     }
 }
+export const likePost = async (req, res) => {
+    try {
+        const likeKrneWalaUserKiId = req.id;
+        const postId = req.params.id; 
+        const post = await Post.findById(postId);
+        if (!post) return res.status(404).json({ message: 'Post not found', success: false });
 
+        // like logic started
+        await post.updateOne({ $addToSet: { likes: likeKrneWalaUserKiId } });
+        await post.save();
+
+        // implement socket io for real time notification
+        const user = await User.findById(likeKrneWalaUserKiId).select('username profilePicture');
+         
+        const postOwnerId = post.author.toString();
+        if(postOwnerId !== likeKrneWalaUserKiId){
+            // emit a notification event
+            const notification = {
+                type:'like',
+                userId:likeKrneWalaUserKiId,
+                userDetails:user,
+                postId,
+                message:'Your post was liked'
+            }
+            const postOwnerSocketId = getReceiverSocketId(postOwnerId);
+            io.to(postOwnerSocketId).emit('notification', notification);
+        }
+
+        return res.status(200).json({message:'Post liked', success:true});
+    } catch (error) {
+
+    }
+}
 
 
 
