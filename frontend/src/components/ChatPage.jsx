@@ -15,7 +15,22 @@ const ChatPage = () => {
     const { onlineUsers, messages } = useSelector(store => store.chat);
     const dispatch = useDispatch();
 
-    
+    const sendMessageHandler = async (receiverId) => {
+        try {
+            const res = await axios.post(`http://localhost:8000/api/v1/message/send/${receiverId}`, { textMessage }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                withCredentials: true
+            });
+            if (res.data.success) {
+                dispatch(setMessages([...messages, res.data.newMessage]));
+                setTextMessage("");
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     
 
