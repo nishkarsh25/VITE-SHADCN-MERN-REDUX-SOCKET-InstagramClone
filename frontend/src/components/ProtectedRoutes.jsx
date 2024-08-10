@@ -10,6 +10,6 @@ const ProtectedRoutes = ({children}) => {
             navigate("/login");
         }
     },[])
-  
+  return <>{children}</>
 }
 
