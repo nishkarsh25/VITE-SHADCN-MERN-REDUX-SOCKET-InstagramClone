@@ -19,4 +19,5 @@ const rtnSlice = createSlice({
     },
 });
 
-
+export const { setLikeNotification } = rtnSlice.actions;
+export default rtnSlice.reducer;
