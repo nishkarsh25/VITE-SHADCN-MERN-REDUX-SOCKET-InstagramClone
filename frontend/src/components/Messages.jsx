@@ -41,3 +41,4 @@ const Messages = ({ selectedUser }) => {
     )
 }
 
+export default Messages
