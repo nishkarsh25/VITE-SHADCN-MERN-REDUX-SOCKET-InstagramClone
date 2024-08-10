@@ -31,6 +31,6 @@ const rootReducer = combineReducers({
     realTimeNotification:rtnSlice
 })
 
-
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 
