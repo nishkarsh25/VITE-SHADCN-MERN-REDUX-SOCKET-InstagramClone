@@ -20,9 +20,35 @@ const LeftSidebar = () => {
     const [open, setOpen] = useState(false);
 
 
-    
+    const logoutHandler = async () => {
+        try {
+            const res = await axios.get('http://localhost:8000/api/v1/user/logout', { withCredentials: true });
+            if (res.data.success) {
+                dispatch(setAuthUser(null));
+                dispatch(setSelectedPost(null));
+                dispatch(setPosts([]));
+                dispatch(setLikeNotification([]));
+                navigate("/login");
+                toast.success(res.data.message);
+            }
+        } catch (error) {
+            toast.error(error.response.data.message);
+        }
+    }
 
-    
+    const sidebarHandler = (textType) => {
+        if (textType === 'Logout') {
+            logoutHandler();
+        } else if (textType === "Create") {
+            setOpen(true);
+        } else if (textType === "Profile") {
+            navigate(`/profile/${user?._id}`);
+        } else if (textType === "Home") {
+            navigate("/");
+        } else if (textType === 'Messages') {
+            navigate("/chat");
+        }
+    }
 
     
     return 
