@@ -10,5 +10,18 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPosts } from '@/redux/postSlice';
 
+const CreatePost = ({ open, setOpen }) => {
+  const imageRef = useRef();
+  const [file, setFile] = useState("");
+  const [caption, setCaption] = useState("");
+  const [imagePreview, setImagePreview] = useState("");
+  const [loading, setLoading] = useState(false);
+  const {user} = useSelector(store=>store.auth);
+  const {posts} = useSelector(store=>store.post);
+  const dispatch = useDispatch();
 
+  
+
+  return 
+}
 
