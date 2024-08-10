@@ -6,5 +6,11 @@ import { useSelector } from 'react-redux'
 import useGetAllMessage from '@/hooks/useGetAllMessage'
 import useGetRTM from '@/hooks/useGetRTM'
 
-
+const Messages = ({ selectedUser }) => {
+    useGetRTM();
+    useGetAllMessage();
+    const {messages} = useSelector(store=>store.chat);
+    const {user} = useSelector(store=>store.auth);
+    return 
+}
 
