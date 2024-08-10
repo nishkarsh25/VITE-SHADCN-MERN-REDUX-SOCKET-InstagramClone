@@ -15,7 +15,38 @@ import { setLikeNotification } from './redux/rtnSlice'
 import ProtectedRoutes from './components/ProtectedRoutes'
 
 
-
+const browserRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <ProtectedRoutes><MainLayout /></ProtectedRoutes>,
+    children: [
+      {
+        path: '/',
+        element: <ProtectedRoutes><Home /></ProtectedRoutes>
+      },
+      {
+        path: '/profile/:id',
+        element: <ProtectedRoutes> <Profile /></ProtectedRoutes>
+      },
+      {
+        path: '/account/edit',
+        element: <ProtectedRoutes><EditProfile /></ProtectedRoutes>
+      },
+      {
+        path: '/chat',
+        element: <ProtectedRoutes><ChatPage /></ProtectedRoutes>
+      },
+    ]
+  },
+  {
+    path: '/login',
+    element: <Login />
+  },
+  {
+    path: '/signup',
+    element: <Signup />
+  },
+])
 
 
 
