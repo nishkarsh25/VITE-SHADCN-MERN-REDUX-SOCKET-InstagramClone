@@ -16,3 +16,4 @@ const useGetRTM = () => {
         }
     }, [messages, setMessages]);
 };
+export default useGetRTM;
