@@ -76,7 +76,7 @@ function App() {
   useEffect(() => {
     if (user) {
       const socketio = io(
-        "https://vite-shadcn-mern-redux-socket-instaclone.onrender.com",
+        "https://vite-shadcn-mern-redux-socket.onrender.com",
         {
           query: {
             userId: user?._id,

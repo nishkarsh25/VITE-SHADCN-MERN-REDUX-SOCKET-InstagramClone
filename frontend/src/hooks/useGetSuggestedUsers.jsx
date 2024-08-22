@@ -9,7 +9,7 @@ const useGetSuggestedUsers = () => {
     const fetchSuggestedUsers = async () => {
       try {
         const res = await axios.get(
-          "https://vite-shadcn-mern-redux-socket-instaclone.onrender.com/api/v1/user/suggested",
+          "https://vite-shadcn-mern-redux-socket.onrender.com/api/v1/user/suggested",
           { withCredentials: true }
         );
         if (res.data.success) {

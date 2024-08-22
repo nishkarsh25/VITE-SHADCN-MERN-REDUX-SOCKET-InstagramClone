@@ -34,7 +34,7 @@ const CommentDialog = ({ open, setOpen }) => {
   const sendMessageHandler = async () => {
     try {
       const res = await axios.post(
-        `https://vite-shadcn-mern-redux-socket-instaclone.onrender.com/api/v1/post/${selectedPost?._id}/comment`,
+        `https://vite-shadcn-mern-redux-socket.onrender.com/api/v1/post/${selectedPost?._id}/comment`,
         { text },
         {
           headers: {

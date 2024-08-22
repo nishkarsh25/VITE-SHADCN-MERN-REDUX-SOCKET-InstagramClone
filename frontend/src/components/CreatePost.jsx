@@ -36,7 +36,7 @@ const CreatePost = ({ open, setOpen }) => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "https://vite-shadcn-mern-redux-socket-instaclone.onrender.com/api/v1/post/addpost",
+        "https://vite-shadcn-mern-redux-socket.onrender.com/api/v1/post/addpost",
         formData,
         {
           headers: {

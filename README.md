@@ -6,7 +6,6 @@ Welcome to the MERN (MongoDB, Express.js, React.js, Node.js) stack project! This
 
 This project is a modern web application designed to facilitate social interactions among users. It provides a platform where users can create profiles, connect with others, chat in real-time, and post updates. The application is built with a React frontend and a Node.js backend, offering a seamless and interactive user experience. It leverages several advanced technologies and tools to ensure a robust and scalable solution.
 
-
 ## Key Features
 
 - **User Authentication**: Secure user registration and login system with JWT-based authentication.
@@ -17,10 +16,9 @@ This project is a modern web application designed to facilitate social interacti
 - **Notifications**: Real-time notifications for likes and comments to keep users engaged.
 - **Responsive Design**: The application is fully responsive, ensuring a smooth experience on both desktop and mobile devices.
 
-
 ## Live Demo
 
-You can try out the live demo of the app [here](https://vite-shadcn-mern-redux-socket-instaclone.onrender.com).
+You can try out the live demo of the app [here](https://vite-shadcn-mern-redux-socket.onrender.com).
 
 ## Folder Structure
 
@@ -59,10 +57,9 @@ project-root/
 
 ```
 
-
 ## GIF's
 
-<img src="https://github.com/nishkarsh25/VITE-SHADCN-MERN-REDUX-SOCKET-InstagramClone/blob/main/Screenshots/ss1.gif" alt="Screenshot 1" width="1000"> 
+<img src="https://github.com/nishkarsh25/VITE-SHADCN-MERN-REDUX-SOCKET-InstagramClone/blob/main/Screenshots/ss1.gif" alt="Screenshot 1" width="1000">
 
 ## Technologies Used
 
@@ -86,7 +83,6 @@ project-root/
 - **Redux**: A state management library for JavaScript applications. It helps manage the application state and synchronize data between components.
 - **Sonner**: A library for displaying toast notifications, providing feedback to users for various actions and events.
 
-
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -95,8 +91,6 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-
 
 ## Getting Started
 
@@ -115,26 +109,28 @@ Before running the project, ensure you have the following installed:
    ```bash
    git clone https://github.com/nishkarsh25/VITE-SHADCN-MERN-REDUX-SOCKET-InstagramClone.git
    ```
+
 2. Navigate to the project branch:
 
    ```bash
    git checkout <branch-name>
    ```
+
    Replace `<branch-name>` with the name of the branch you want to checkout.
-   
+
 3. Start the Backend Server: Launch the backend Node.js server.
 
    ```bash
    cd backend
    node index.js
    ```
+
 4. Start the Frontend Development Server: Run the React development server for the frontend application.
 
    ```bash
    cd frontend
    npm run dev
    ```
-
 
 ## Usage
 
@@ -144,6 +140,7 @@ Before running the project, ensure you have the following installed:
    cd client
    npm start
    ```
+
 2. **Open your browser** and navigate to http://localhost:5173 to view the app.
 
 ## How to Use
@@ -188,7 +185,8 @@ Before running the project, ensure you have the following installed:
 #### User Authentication
 
 - **Register**: `POST /api/v1/auth/register`
-  - **Request Body**: 
+
+  - **Request Body**:
     ```json
     {
       "username": "string",
@@ -196,7 +194,7 @@ Before running the project, ensure you have the following installed:
       "password": "string"
     }
     ```
-  - **Response**: 
+  - **Response**:
     ```json
     {
       "success": true,
@@ -205,6 +203,7 @@ Before running the project, ensure you have the following installed:
     ```
 
 - **Login**: `POST /api/v1/auth/login`
+
   - **Request Body**:
     ```json
     {
@@ -212,7 +211,7 @@ Before running the project, ensure you have the following installed:
       "password": "string"
     }
     ```
-  - **Response**: 
+  - **Response**:
     ```json
     {
       "success": true,
@@ -238,6 +237,7 @@ Before running the project, ensure you have the following installed:
 #### Profile Management
 
 - **Get Profile**: `GET /api/v1/users/:id`
+
   - **Response**:
     ```json
     {
@@ -269,6 +269,7 @@ Before running the project, ensure you have the following installed:
 #### Chat
 
 - **Send Message**: `POST /api/v1/message/send/:receiverId`
+
   - **Request Body**:
     ```json
     {
@@ -306,6 +307,7 @@ Before running the project, ensure you have the following installed:
 #### Posts
 
 - **Create Post**: `POST /api/v1/post/addpost`
+
   - **Request Body** (FormData):
     - `caption`: "string"
     - `image`: File (optional)
@@ -325,6 +327,7 @@ Before running the project, ensure you have the following installed:
     ```
 
 - **Get Posts**: `GET /api/v1/post/all`
+
   - **Response**:
     ```json
     [
@@ -350,6 +353,7 @@ Before running the project, ensure you have the following installed:
 #### Comments
 
 - **Add Comment**: `POST /api/v1/post/:postId/comment`
+
   - **Request Body**:
     ```json
     {
@@ -399,8 +403,6 @@ Before running the project, ensure you have the following installed:
     ]
     ```
 
-
-
 ## Contributing
 
 Contributions to this project are highly appreciated! Whether you discover bugs, have feature requests, or wish to contribute improvements, your input is valuable. Here's how you can contribute:
@@ -422,26 +424,21 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 This project is licensed under the [The 3-Clause BSD License](LICENSE).Feel free to explore, modify, and contribute to this project as you see fit. Your feedback and contributions are greatly appreciated! 🚀✨
 
-
 ## Acknowledgments
 
 This project is made possible by the contributions and support of various individuals and communities. Special thanks to:
 
 - **Tailwind CSS Team:** For developing Tailwind CSS, a versatile CSS framework that simplifies web development and enhances user interfaces.
-  
 - **Open Source Community:** For fostering collaboration, innovation, and the sharing of knowledge, which enriches projects like My Form Validation and makes them accessible to all.
-
 
 ## Credits
 
 This project wouldn't be possible without the contributions of the following:
 
 - **React**: A JavaScript library for building user interfaces. Visit [React](https://reactjs.org/) for more information.
-  
 - **Vite**: A fast build tool that serves your code via native ESM. Visit [Vite](https://vitejs.dev/) for more information.
 
 - **Shadcn UI**: A component library providing a set of highly customizable UI components built for React. Visit [Shadcn UI](https://ui.shadcn.com/docs/installation/vite) for more information.
-  
 - **Tailwind CSS**: A utility-first CSS framework for creating custom designs rapidly. Visit [Tailwind CSS](https://tailwindcss.com/) for more information.
 
 - **React Router**: React Router is a library for routing in React applications, allowing for navigation between different components. Visit [React Router](https://reactrouter.com/) for more information.
@@ -464,11 +461,8 @@ This project wouldn't be possible without the contributions of the following:
 
 - **MongoDB Atlas**: MongoDB Atlas is a fully managed cloud database service for modern applications. Visit [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for more information.
 
-
-
 ## Author
 
 - **Nishkarsh Gupta**
   - GitHub: [nishkarsh25](https://github.com/nishkarsh25)
   - Email: bm21btech11016@gmail.com
-

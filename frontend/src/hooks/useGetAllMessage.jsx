@@ -11,7 +11,7 @@ const useGetAllMessage = () => {
     const fetchAllMessage = async () => {
       try {
         const res = await axios.get(
-          `https://vite-shadcn-mern-redux-socket-instaclone.onrender.com/api/v1/message/all/${selectedUser?._id}`,
+          `https://vite-shadcn-mern-redux-socket.onrender.com/api/v1/message/all/${selectedUser?._id}`,
           { withCredentials: true }
         );
         if (res.data.success) {

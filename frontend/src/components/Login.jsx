@@ -27,7 +27,7 @@ const Login = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "https://vite-shadcn-mern-redux-socket-instaclone.onrender.com/api/v1/user/login",
+        "https://vite-shadcn-mern-redux-socket.onrender.com/api/v1/user/login",
         input,
         {
           headers: {

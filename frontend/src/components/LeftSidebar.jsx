@@ -32,7 +32,7 @@ const LeftSidebar = () => {
   const logoutHandler = async () => {
     try {
       const res = await axios.get(
-        "https://vite-shadcn-mern-redux-socket-instaclone.onrender.com/api/v1/user/logout",
+        "https://vite-shadcn-mern-redux-socket.onrender.com/api/v1/user/logout",
         { withCredentials: true }
       );
       if (res.data.success) {

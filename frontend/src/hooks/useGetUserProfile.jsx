@@ -10,7 +10,7 @@ const useGetUserProfile = (userId) => {
     const fetchUserProfile = async () => {
       try {
         const res = await axios.get(
-          `https://vite-shadcn-mern-redux-socket-instaclone.onrender.com/api/v1/user/${userId}/profile`,
+          `https://vite-shadcn-mern-redux-socket.onrender.com/api/v1/user/${userId}/profile`,
           { withCredentials: true }
         );
         if (res.data.success) {

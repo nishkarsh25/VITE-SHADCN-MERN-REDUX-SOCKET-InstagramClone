@@ -9,7 +9,7 @@ const useGetAllPost = () => {
     const fetchAllPost = async () => {
       try {
         const res = await axios.get(
-          "https://vite-shadcn-mern-redux-socket-instaclone.onrender.com/api/v1/post/all",
+          "https://vite-shadcn-mern-redux-socket.onrender.com/api/v1/post/all",
           { withCredentials: true }
         );
         if (res.data.success) {
